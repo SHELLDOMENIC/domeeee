@@ -40,7 +40,7 @@
                                       <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
                                       <Group type="102" attributes="0">
                                           <Group type="103" groupAlignment="1" attributes="0">
-                                              <Component id="jRadioButton1" min="-2" max="-2" attributes="0"/>
+                                              <Component id="radiobtn" min="-2" max="-2" attributes="0"/>
                                               <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
                                           </Group>
                                           <EmptySpace max="32767" attributes="0"/>
@@ -67,7 +67,7 @@
                           <Group type="102" alignment="0" attributes="0">
                               <EmptySpace min="-2" pref="4" max="-2" attributes="0"/>
                               <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="txtNombreProducto" pref="132" max="32767" attributes="0"/>
+                                  <Component id="txtNombreProducto" pref="148" max="32767" attributes="0"/>
                                   <Component id="txtPrecioProducto" max="32767" attributes="0"/>
                               </Group>
                               <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
@@ -105,7 +105,7 @@
                       <Component id="jLabel4" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="jRadioButton1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="radiobtn" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="jRadioButton2" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <EmptySpace max="-2" attributes="0"/>
@@ -157,13 +157,16 @@
         <Property name="text" type="java.lang.String" value="Estado:"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="jRadioButton1">
+    <Component class="javax.swing.JRadioButton" name="radiobtn">
       <Properties>
         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
           <ComponentRef name="btnBoolean"/>
         </Property>
         <Property name="text" type="java.lang.String" value="Bueno"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="radiobtnActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JRadioButton" name="jRadioButton2">
       <Properties>
@@ -172,6 +175,9 @@
         </Property>
         <Property name="text" type="java.lang.String" value="Malo"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jRadioButton2ActionPerformed"/>
+      </Events>
     </Component>
     <Container class="javax.swing.JScrollPane" name="jScrollPane1">
       <AuxValues>

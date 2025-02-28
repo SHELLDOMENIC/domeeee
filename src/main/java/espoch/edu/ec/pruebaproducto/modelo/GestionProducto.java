@@ -24,9 +24,10 @@ public class GestionProducto {
                 vecProducto[i].setPrecio(objProducto.getPrecio());
                 vecProducto[i].setEstado(true);
                 Producto.add(new Producto(objProducto.getNombre(), objProducto.getPrecio(), objProducto.isEstado()));
-   
+                System.out.println("Resultado"+vecProducto);
                 break;
             }
+            
 
         }
        
@@ -41,6 +42,7 @@ public class GestionProducto {
             }
 
         }
+
         
         return ("Los Productos son" + Producto1);
                 

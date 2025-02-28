@@ -27,8 +27,8 @@ public class IuVista extends javax.swing.JFrame {
         return txtPrecioProducto.getText();
     }
 
-    public void isEstado() {
-        btnBoolean.getSelection();
+    public boolean isEstado() {
+        return radiobtn.isSelected();
     }
 
     public void erroresVista(String msm) {
@@ -57,7 +57,7 @@ public class IuVista extends javax.swing.JFrame {
         txtNombreProducto = new javax.swing.JTextField();
         txtPrecioProducto = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        jRadioButton1 = new javax.swing.JRadioButton();
+        radiobtn = new javax.swing.JRadioButton();
         jRadioButton2 = new javax.swing.JRadioButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         txtAreaPresentar = new javax.swing.JTextArea();
@@ -82,11 +82,21 @@ public class IuVista extends javax.swing.JFrame {
 
         jLabel4.setText("Estado:");
 
-        btnBoolean.add(jRadioButton1);
-        jRadioButton1.setText("Bueno");
+        btnBoolean.add(radiobtn);
+        radiobtn.setText("Bueno");
+        radiobtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                radiobtnActionPerformed(evt);
+            }
+        });
 
         btnBoolean.add(jRadioButton2);
         jRadioButton2.setText("Malo");
+        jRadioButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRadioButton2ActionPerformed(evt);
+            }
+        });
 
         txtAreaPresentar.setColumns(20);
         txtAreaPresentar.setRows(5);
@@ -130,7 +140,7 @@ public class IuVista extends javax.swing.JFrame {
                                         .addComponent(jLabel2)
                                         .addGroup(layout.createSequentialGroup()
                                             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                                .addComponent(jRadioButton1)
+                                                .addComponent(radiobtn)
                                                 .addComponent(jLabel3))
                                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                             .addComponent(jRadioButton2)))))
@@ -148,7 +158,7 @@ public class IuVista extends javax.swing.JFrame {
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(4, 4, 4)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(txtNombreProducto, javax.swing.GroupLayout.DEFAULT_SIZE, 132, Short.MAX_VALUE)
+                                    .addComponent(txtNombreProducto, javax.swing.GroupLayout.DEFAULT_SIZE, 148, Short.MAX_VALUE)
                                     .addComponent(txtPrecioProducto))
                                 .addGap(0, 0, Short.MAX_VALUE)))))
                 .addContainerGap(13, Short.MAX_VALUE))
@@ -176,7 +186,7 @@ public class IuVista extends javax.swing.JFrame {
                         .addComponent(jLabel4)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jRadioButton1)
+                            .addComponent(radiobtn)
                             .addComponent(jRadioButton2))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -199,7 +209,7 @@ public class IuVista extends javax.swing.JFrame {
     }//GEN-LAST:event_txtPrecioProductoActionPerformed
 
     private void BtnAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnAgregarActionPerformed
-        objControlador.setagregarProducto();        // TODO add your handling code here:
+        objControlador.setagregarProducto(objControlador);        // TODO add your handling code here:
     }//GEN-LAST:event_BtnAgregarActionPerformed
 
     private void btnLimpiarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLimpiarActionPerformed
@@ -207,8 +217,16 @@ public class IuVista extends javax.swing.JFrame {
     }//GEN-LAST:event_btnLimpiarActionPerformed
 
     private void btnMostrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMostrarActionPerformed
-        objControlador.mostrarProducto();        // TODO add your handling code here:
+        objControlador.mostrarProducto();     // TODO add your handling code here:
     }//GEN-LAST:event_btnMostrarActionPerformed
+
+    private void radiobtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_radiobtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_radiobtnActionPerformed
+
+    private void jRadioButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -223,11 +241,23 @@ public class IuVista extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JRadioButton radiobtn;
     private javax.swing.JTextArea txtAreaPresentar;
     private javax.swing.JTextField txtNombreProducto;
     private javax.swing.JTextField txtPrecioProducto;
     // End of variables declaration//GEN-END:variables
+
+    public void respuesta(String result) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+   /* public void respuesta(String result) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }*/
+
+   /* public void respuesta(String result) {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }*/
 }
